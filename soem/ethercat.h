@@ -23,4 +23,8 @@
 #include "ethercatconfig.h"
 #include "ethercatprint.h"
 
+#ifdef inline
+#undef inline
+#endif
+
 #endif /* _EC_ETHERCAT_H */

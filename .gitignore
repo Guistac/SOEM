@@ -4,3 +4,9 @@ install
 /doc/latex
 /doc/html
 tags
+
+
+*.user
+*.sln
+*.vcxproj
+*.filters
