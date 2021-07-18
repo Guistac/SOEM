@@ -12,7 +12,7 @@
 #define _EC_ETHERCAT_H
 
 #include "ethercattype.h"
-#include "nicdrv.h"
+#include <nicdrv.h> //Changed to <> brackets because the file is in a different include directory than ethercat.h
 #include "ethercatbase.h"
 #include "ethercatmain.h"
 #include "ethercatdc.h"
