@@ -133,7 +133,8 @@ int osal_thread_create_rt(void *thandle, int stacksize, void *func, void *param)
       return 0;
    }
    memset(&schparam, 0, sizeof(schparam));
-   schparam.sched_priority = 40;
+   //schparam.sched_priority = 40;
+    schparam.sched_priority = sched_get_priority_max(SCHED_FIFO);
    ret = pthread_setschedparam(*threadp, SCHED_FIFO, &schparam);
    if(ret < 0)
    {
