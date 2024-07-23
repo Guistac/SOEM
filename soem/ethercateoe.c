@@ -36,17 +36,11 @@ static void EOE_ip_uint32_to_byte(eoe_ip4_addr_t * ip, uint8_t * byte_ip)
 */
 static void EOE_ip_byte_to_uint32(uint8_t * byte_ip, eoe_ip4_addr_t * ip)
 {
-	
-	//We removed this block and use the variables because of of fucking issue when updating to macos13
-	uint8_t a = *byte_ip;
-	eoe_ip4_addr_t b = *ip;
-	b.addr = a;
-	//EOE_IP4_ADDR_TO_U32(ip,
-	//	byte_ip[3],  /* 1st octet */
-	//	byte_ip[2],  /* 2nd octet */
-	//	byte_ip[1],  /* 3ed octet */
-	//	byte_ip[0]); /* 4th octet */
-	
+	EOE_IP4_ADDR_TO_U32(ip,
+	   byte_ip[3],  /* 1st octet */
+	   byte_ip[2],  /* 2nd octet */
+	   byte_ip[1],  /* 3ed octet */
+	   byte_ip[0]); /* 4th octet */	
 }
 
 /** EoE fragment data handler hook. Should not block.
