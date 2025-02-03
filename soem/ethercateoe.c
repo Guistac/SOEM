@@ -40,7 +40,7 @@ static void EOE_ip_byte_to_uint32(uint8_t * byte_ip, eoe_ip4_addr_t * ip)
 	   byte_ip[3],  /* 1st octet */
 	   byte_ip[2],  /* 2nd octet */
 	   byte_ip[1],  /* 3ed octet */
-	   byte_ip[0]); /* 4th octet */	
+	   byte_ip[0]); /* 4th octet */
 }
 
 /** EoE fragment data handler hook. Should not block.
